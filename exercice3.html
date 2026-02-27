@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercice 3 - Constantes avec const</title>
+</head>
+<body>
+    <h1>Exercice 3 - Calculatrice de prix</h1>
+    <p>Ouvrez la console pour voir les résultats (F12)</p>
+
+    <script>
+        
+        const TAUX_TVA = 0.20;  
+
+        let prixHT = 150;  
+        let montantTVA = TAUX_TVA * prixHT;
+        let prixTTC = prixHT + montantTVA;
+
+        console.log(`Prix HT : ${prixHT} € | TVA (20%) : ${montantTVA} € | Prix TTC : ${prixTTC} €`);
+
+
+        console.log("\n--- Changement du prix HT ---");
+        prixHT = 200; 
+        montantTVA = TAUX_TVA * prixHT;
+        prixTTC = prixHT + montantTVA;
+        console.log(`Prix HT : ${prixHT} € | TVA (20%) : ${montantTVA} € | Prix TTC : ${prixTTC} €`);
+
+        const NOM_MAGASIN = "Ma Boutique";
+        const TVA = "20%";
+        
+        console.log(`\nBienvenue chez ${NOM_MAGASIN} - TVA : ${TVA}`);
+    </script>
+</body>
+</html>

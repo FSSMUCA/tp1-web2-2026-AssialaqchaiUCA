@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercice 5 </title>
+</head>
+<body>
+    <h1>Ma fiche de présentation</h1>
+    
+    <p id="nomComplet">...</p>
+    <p id="age">...</p>
+    <p id="ville">...</p>
+    <p id="presentation">...</p>
+
+    <script>
+        let prenom = "Assia";
+        let nom = "LAQCHAI";
+        let age = 18;
+        let ville = "Marrakech";
+
+        document.getElementById("nomComplet").innerHTML = prenom + " " + nom;
+        
+        document.getElementById("age").innerHTML = "Âge : " + age + " ans";
+        
+        document.getElementById("ville").innerHTML = "Ville : " + ville;
+
+        let phrasePresentation = `Je m'appelle ${prenom} ${nom}, j'ai ${age} ans et j'habite à ${ville}.`;
+        document.getElementById("presentation").innerHTML = phrasePresentation;
+
+        document.title = "Fiche de " + prenom;
+
+        
+        console.log("Titre de la page :", document.title);
+        console.log("Contenu modifié avec succès !");
+    </script>
+</body>
+</html>
