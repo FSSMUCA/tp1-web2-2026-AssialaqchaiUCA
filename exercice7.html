@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercice 7 - Calculateur de cercle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        div {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculatrice de cercle</h1>
+    
+    <div id="rayon"></div>
+    <div id="perimetre"></div>
+    <div id="surface"></div>
+
+    <script>
+        const PI = Math.PI;
+
+        let rayonSaisi = prompt("Entrez le rayon du cercle (en cm) :");
+        
+        if (rayonSaisi === null || rayonSaisi.trim() === "" || isNaN(rayonSaisi)) {
+            alert("Veuillez entrer un nombre valide !");
+            rayonSaisi = 0;
+        }
+        
+        let rayon = Number(rayonSaisi);
+
+        let perimetre = 2 * PI * rayon;
+        let surface = PI * rayon * rayon;
+
+        document.getElementById("rayon").innerHTML = `Rayon : ${rayon} cm`;
+        document.getElementById("perimetre").innerHTML = `Périmètre : ${perimetre.toFixed(2)} cm`;
+        document.getElementById("surface").innerHTML = `Surface : ${surface.toFixed(2)} cm²`;
+
+        console.log("--- Calculateur de cercle ---");
+        console.log(`PI utilisé : ${PI}`);
+        console.log(`Rayon saisi : ${rayon} cm`);
+        console.log(`Périmètre : ${perimetre.toFixed(2)} cm`);
+        console.log(`Surface : ${surface.toFixed(2)} cm²`);
+        
+        if (rayon <= 0) {
+            document.getElementById("rayon").innerHTML = "Rayon : " + rayon + " cm (Attention: cercle de rayon nul ou négatif ?)";
+        }
+    </script>
+</body>
+</html>

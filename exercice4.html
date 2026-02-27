@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercice 4 r</title>
+</head>
+<body>
+    <h1>Exercice 4</h1>
+    <p>Regardez les boîtes de dialogue qui apparaissent !</p>
+
+    <script>
+        let prenom = prompt("Quel est votre prénom ?");
+        
+        let age = prompt("Quel est votre âge ?");
+        
+        age = Number(age);
+        
+        let anneeNaissance = 2025 - age;
+        
+        alert(`Bonjour ${prenom} ! Vous êtes né(e) vers ${anneeNaissance}.`);
+        
+        let afficherConsole = confirm("Afficher vos informations dans la console ?");
+        
+        if (afficherConsole === true) {
+            console.log("--- Informations utilisateur ---");
+            console.log("Prénom :", prenom);
+            console.log("Âge :", age);
+            console.log("Année de naissance :", anneeNaissance);
+            console.log("-------------------------------");
+        } else {
+            console.log("L'utilisateur a choisi de ne pas afficher ses informations.");
+        }
+
+        
+        if (prenom === null || age === null || isNaN(age)) {
+            alert("Vous avez annulé ou entré une valeur invalide. Rafraîchissez la page pour réessayer.");
+        }
+    </script>
+</body>
+</html>
